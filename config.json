@@ -1,0 +1,130 @@
+{
+  "PythonServerEnabled": true,
+  "ToolEnabled": true,
+  "GPIO-Limit": [
+    {
+      "model": "Raspberry Pi 4", 
+      "pins": [
+        {"pin": 0, "options": [
+          "SPI3 CE0 N",
+          "TXD2",
+          "SDA0",
+          "SDA6"
+        ], "pos": 27},
+        {"pin": 1, "options": [
+          "SPI3 MISO",
+          "SCL0",
+          "SCL6",
+          "RXD2"
+        ], "pos": 28},
+        {"pin": 2, "options": [
+          "SPI3 MOSI",
+          "SDA1",
+          "SDA3"
+        ], "pos": 3},
+        {"pin": 3, "options": [
+          "SPI3 SCLK",
+          "SCL1",
+          "SCL3"
+        ], "pos": 5},
+        {"pin": 4, "options": [
+          "SPI4 CE0 N",
+          "TXD3",
+          "SDA3"
+        ], "pos": 7},
+        {"pin": 5, "options": [
+          "SPI4 MISO",
+          "RXD3",
+          "SCL3"
+        ], "pos": 29},
+        {"pin": 6, "options": [
+          "SPI4 MOSI",
+          "SDA4"
+        ], "pos": 31},
+        {"pin": 7, "options": [
+          "SPI0 CE1",
+          "SPI4 SCLK",
+          "SCL4"
+        ], "pos": 26},
+        {"pin": 8, "options": [
+          "SPI0 CE0 N",
+          "TXD4",
+          "SDA4"
+        ], "pos": 24},
+        {"pin": 9, "options": [
+          "SPI0 MISO",
+          "RXD4",
+          "SCL4"
+        ], "pos": 21},
+        {"pin": 10, "options": [
+          "SPI0 MOSI",
+          "SDA5"
+        ], "pos": 19},
+        {"pin": 11, "options": [
+          "SPI0 SCLK",
+          "SCL5"
+        ], "pos": 23},
+        {"pin": 12, "options": [
+          "SPI5 CE0 N",
+          "TXD5",
+          "SDA5"
+        ], "pos": 32},
+        {"pin": 13, "options": [
+          "SPI5 MISO",
+          "RXD5",
+          "SCL5"
+        ], "pos": 33},
+        {"pin": 14, "options": [
+          "SPI5 MOSI",
+          "TXD0",
+          "TXD1"
+        ], "pos": 8},
+        {"pin": 15, "options": [
+          "SPI5 SCLK",
+          "RXD0",
+          "RXD1"
+        ], "pos": 10},
+        {"pin": 16, "options": [
+          "SPI1 CE2 N"
+        ], "pos": 36},
+        {"pin": 17, "options": [
+          "SPI1 CE1 N"
+        ], "pos": 11},
+        {"pin": 18, "options": [
+          "SPI1 CE0 N",
+          "SPI6 CE0 N"
+        ], "pos": 12},
+        {"pin": 19, "options": [
+          "SPI1 MISO",
+          "SPI6 MISO"
+        ], "pos": 35},
+        {"pin": 20, "options": [
+          "SPI1 MOSI",
+          "SPI6 MOSI"
+        ], "pos": 38},
+        {"pin": 21, "options": [
+          "SPI1 SCLK",
+          "SPI6 SCLK"
+        ], "pos": 40},
+        {"pin": 22, "options": [
+          "SDA6"
+        ], "pos": 15},
+        {"pin": 23, "options": [
+          "SCL6"
+        ], "pos": 16},
+        {"pin": 24, "options": [
+          "SPI3 CE1 N"
+        ], "pos": 18},
+        {"pin": 25, "options": [
+          "SPI4 CE1 N"
+        ], "pos": 22},
+        {"pin": 26, "options": [
+          "SPI5 CE1 N"
+        ], "pos": 37},
+        {"pin": 27, "options": [
+          "SPI6 CE1 N"
+        ], "pos": 13},
+      ],
+    }
+  ]
+}

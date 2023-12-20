@@ -2,11 +2,100 @@
 <html>
   <head>
     <title>GPiO Playground | Play with the Raspberry</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <script src="https://codemirror.net/codemirror.js"></script>
+    <script type="module">
+import {basicSetup, EditorView} from "/static/codemirror/codemirror.js"
+import {autocompletion} from "/static/codemirror/@codemirror-autocomplete.js"
+
+// Our list of completions (can be static, since the editor
+/// will do filtering based on context).
+const completions = [
+  {label: "panic", type: "keyword"},
+  {label: "park", type: "constant", info: "Test completion"},
+  {label: "password", type: "variable", info: "Runs a password checker. Checks password"},
+]
+
+function myCompletions(context) {
+  let before = context.matchBefore(/\w+/)
+  // If completion wasn't explicitly started and there
+  // is no word before the cursor, don't open completions.
+  if (!context.explicit && !before) return null
+  return {
+    from: before ? before.from : context.pos,
+    options: completions,
+    validFor: /^\w*$/
+  }
+}
+
+let view = new EditorView({
+  doc: "// Welcome to the Raspberry Pi Software GPiO Official Platform.\n",
+  extensions: [
+    basicSetup,
+    autocompletion({override: [myCompletions]})
+  ],
+  parent: document.body.querySelector('.code-mirror')
+})
+
+
+    </script>
   </head>
   <body>
-    <h1>Welcome to GPiO Playground</h1>
-    <p>Here are some actions for you.</p>
-    <a href="#"> Make a new project</a>
-    <a href="#"> Open a project</a>
+    <div class="top-navigation">
+      <nav>
+        <ul>
+          <li>Home</li>
+          <li>File</li>
+          <li>Edit</li>
+          <li>Code</li>
+          <li>Selection</li>
+          <li>Run</li>
+          <li>Terminal</li>
+          <li>Help</li>
+        </ul>
+      </nav>
+    </div>
+    <div class="popup-prompt" hidden>
+      <input type="text" placeholder="placeholder test">
+      <ul>
+        <li>dir 1</li>
+        <li>dir 2</li>
+        <li>dir 3</li>
+        <li>dir 4</li>
+      </ul>
+    </div>
+    
+    <div class="main-content">
+      <h1>Welcome to GPiO Playground</h1>
+      <p>Here are some actions for you.</p>
+      <a href="#">  Make a new project</a><br>
+      <a href="#" class="open-a-project">  Open a project</a>
+    </div>
+
+    <div class="code-mirror" hidden>
+      
+    </div>
+
+
+    <contextmenu hidden>
+      <button type="button">
+        Copy
+      </button>
+      <button type="button">
+        Paste
+      </button>
+      <button type="button">
+        Open Output
+      </button>
+      <button type="button">
+        Run
+      </button>
+      <button type="button">
+        Close GPiO Playground
+      </button>
+    </contextmenu>
+
+
+    <script type="module" src="/static/main.js"></script>
   </body>
 </html>

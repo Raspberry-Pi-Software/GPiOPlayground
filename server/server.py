@@ -13,7 +13,8 @@ def tryint(a):
   return True if type(e) == int else False
 
 server = flask.Flask('locally-hosted-pisft-service', template_folder="assets/html", static_folder="assets/static/", static_url_path="/static")
-port = tryopen('./portfile', 'r', return_file_contents=True) or 80482
+host = tryopen('./hostfile', 'r', return_file_contents=True).strip() or "127.0.0.1"
+port = tryopen('./portfile', 'r', return_file_contents=True).strip() or 80482
 
 if not tryint(port):
   print("Error : port number could not be converted to integer")
@@ -44,5 +45,6 @@ def getpathcontent():
 
 
 server.run(
+  host=str(host),
   port=int(port), debug=True
 )

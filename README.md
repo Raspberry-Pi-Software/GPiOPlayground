@@ -14,11 +14,11 @@ GPiO Playground includes a graphical interface and a text interface.
 ### In package tool:
 Use this command to install GPiO Playground onto your Pi using the Package Tool:
 ```bash
-rpisft install gpio-playground
+rpisft install gpioplayground
 ```
 Use this command to uninstall GPiO Playground from your Pi using the Package Tool:
 ```bash
-rpisft uninstall device-manager
+rpisft uninstall gpioplayground
 ```
 ### In Terminal (manual install)
 Use this command to install the GPiO Playground tool onto your Pi:
@@ -31,6 +31,6 @@ cd GPiOPlayground && sudo bash uninstall;
 ```
 The usage for this tool is:
 ```bash
-rpisft exec gpio-playground
+rpisft exec gpioplayground
 ```
 
